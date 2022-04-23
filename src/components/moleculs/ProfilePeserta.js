@@ -114,7 +114,7 @@ function ProfilePeserta(props) {
                                 <Grid container direction="column" justify="center" alignItems="center">
                                     <Typography variant="h6" color="initial" style={{ marginBottom: '5%' }}>QR Code Peserta</Typography>
                                     {state.loading || !state.peserta ? <Skeleton variant="rect" height={250} width={250} /> :
-                                        <QRCode value={state.peserta[0].id.toString()} />
+                                        <QRCode value={state.peserta[0].id_peserta.toString()} />
                                     }
                                 </Grid>
                             </Grid>

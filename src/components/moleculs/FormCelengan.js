@@ -40,6 +40,7 @@ function FormCelengan(props) {
                 if (update && state.celengan.length > 0) {
                     setcelengan({
                         ...celengan,
+                        id: state.celengan[0].id,
                         year_hijriah: state.celengan[0].year_hijriah,
                         amount: state.celengan[0].amount,
                         notes: state.celengan[0].notes,
@@ -47,6 +48,7 @@ function FormCelengan(props) {
                         is_money_box_sent: state.celengan[0].is_money_box_sent,
                     })
                     reset({
+                        id: state.celengan[0].id,
                         year_hijriah: state.celengan[0].year_hijriah,
                         amount: state.celengan[0].amount,
                         notes: state.celengan[0].notes,
@@ -60,7 +62,7 @@ function FormCelengan(props) {
         }
     }, [update])
     const onSubmit = (data) => {
-        dispatch(UpdateCelengan({ id: params.id, data: celengan }))
+        dispatch(UpdateCelengan({ id: celengan.id, data: celengan }))
     }
 
     if (state.updateCelengan) {

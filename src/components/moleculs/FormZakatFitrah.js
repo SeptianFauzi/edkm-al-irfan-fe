@@ -42,6 +42,7 @@ function FormZakatFitrah(props) {
                 if (update && state.zakatFitrahReceived.length > 0) {
                     setzakatFitrah({
                         ...zakatFitrah,
+                        id: state.zakatFitrahReceived[0].id,
                         year_hijriah: state.zakatFitrahReceived[0].year_hijriah,
                         amount_received: state.zakatFitrahReceived[0].amount_received,
                         notes: state.zakatFitrahReceived[0].notes,
@@ -52,6 +53,7 @@ function FormZakatFitrah(props) {
                         kulak: state.zakatFitrahReceived[0].amount_received / 3.25
                     })
                     reset({
+                        id: state.zakatFitrahReceived[0].id,
                         year_hijriah: state.zakatFitrahReceived[0].year_hijriah,
                         amount_received: state.zakatFitrahReceived[0].amount_received,
                         notes: state.zakatFitrahReceived[0].notes,
@@ -68,7 +70,7 @@ function FormZakatFitrah(props) {
         }
     }, [update])
     const onSubmit = async (data) => {
-        dispatch(UpdateZakatFitrahReceived({ id: params.id, data: zakatFitrah }))
+        dispatch(UpdateZakatFitrahReceived({ id: zakatFitrah.id, data: zakatFitrah }))
     }
 
     if (state.updateZakatFitrahReceived) {

@@ -43,6 +43,7 @@ function FormQurbanSent(props) {
                 if (update && state.qurbanSent.length > 0) {
                     setqurban({
                         ...qurban,
+                        id: state.qurbanSent[0].id,
                         year_hijriah: state.qurbanSent[0].year_hijriah,
                         amount_sent: state.qurbanSent[0].amount_sent,
                         amount_type: state.qurbanSent[0].amount_type,
@@ -53,6 +54,7 @@ function FormQurbanSent(props) {
                         date_qurban_sent: state.qurbanSent[0].date_qurban_sent
                     })
                     reset({
+                        id: state.qurbanSent[0].id,
                         year_hijriah: state.qurbanSent[0].year_hijriah,
                         amount_sent: state.qurbanSent[0].amount_sent,
                         amount_type: state.qurbanSent[0].amount_type,
@@ -69,7 +71,7 @@ function FormQurbanSent(props) {
         }
     }, [update])
     const onSubmit = async (data) => {
-        dispatch(UpdateQurbanSent({ id: params.id, data: qurban }))
+        dispatch(UpdateQurbanSent({ id: qurban.id, data: qurban }))
     }
 
     if (state.updateQurbanSent) {
