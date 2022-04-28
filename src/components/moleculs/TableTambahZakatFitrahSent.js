@@ -65,15 +65,20 @@ function TableTambahZakatFitrahSent(props) {
         {
             field: 'id', headerName: 'ID'
         },
-        { field: 'name', headerName: 'Nama', flex: 1 },
+        { field: 'name', headerName: 'Nama', flex: 0.5 },
         {
-            field: 'is_person', headerName: 'Warga', flex: 0.75, renderCell: (params) => {
+            field: 'is_person', headerName: 'Warga', flex: 0.5, renderCell: (params) => {
                 return params.getValue('is_person') ? <Check style={{ color: 'green' }} /> : <Clear style={{ color: 'red' }} />
             }
         },
         {
-            field: 'service_zakat_sent', headerName: 'Penerima Zakat Fitrah', flex: 0.75, renderCell: (params) => {
+            field: 'service_zakat_sent', headerName: 'Penerima Zakat Fitrah', flex: 0.5, renderCell: (params) => {
                 return params.getValue('service_zakat_sent') ? <Check style={{ color: 'green' }} /> : <Clear style={{ color: 'red' }} />
+            }
+        },
+        {
+            field: 'is_zakat_received', headerName: 'Apakah Mengumpulkan Zakat?', flex: 0.75, renderCell: (params) => {
+                return params.getValue('is_zakat_received') ? <Check style={{ color: 'green' }} /> : <Clear style={{ color: 'red' }} />
             }
         },
     ];
