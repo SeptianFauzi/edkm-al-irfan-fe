@@ -42,7 +42,7 @@ function FormZakatFitrahSent(props) {
                 if (update && state.zakatFitrahSent.length > 0) {
                     setzakatFitrah({
                         ...zakatFitrah,
-                        id: state.zakatFitrahReceived[0].id,
+                        id: state.zakatFitrahSent[0].id,
                         year_hijriah: state.zakatFitrahSent[0].year_hijriah,
                         amount_sent: state.zakatFitrahSent[0].amount_sent,
                         notes: state.zakatFitrahSent[0].notes,
@@ -52,7 +52,7 @@ function FormZakatFitrahSent(props) {
                         date_zakat_sent: state.zakatFitrahSent[0].date_zakat_sent
                     })
                     reset({
-                        id: state.zakatFitrahReceived[0].id,
+                        id: state.zakatFitrahSent[0].id,
                         year_hijriah: state.zakatFitrahSent[0].year_hijriah,
                         amount_sent: state.zakatFitrahSent[0].amount_sent,
                         notes: state.zakatFitrahSent[0].notes,
