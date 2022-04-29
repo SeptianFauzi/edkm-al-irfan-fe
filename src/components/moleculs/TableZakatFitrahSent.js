@@ -43,7 +43,7 @@ function TableZakatFitrahSent(props) {
         },
         {
             field: 'id_peserta_peserta', headerName: 'Nama', flex: 0.8, renderCell: (params) => {
-                return params.getValue('id_peserta_peserta').name
+                return params.row.id_peserta_peserta.name
             }
         },
         {

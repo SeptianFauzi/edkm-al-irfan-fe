@@ -43,7 +43,6 @@ function TableCelengan(props) {
         },
         {
             field: 'id_peserta_peserta', headerName: 'Nama', flex: 0.8, valueGetter: (params) => {
-                console.log(params.row.id_peserta_peserta.name)
                 return params.row.id_peserta_peserta.name
             }
         },
