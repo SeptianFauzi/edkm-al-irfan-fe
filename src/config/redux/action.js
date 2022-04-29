@@ -26,7 +26,7 @@ export const UPDATE_CELENGAN = 'UPDATE_CELENGAN';
 export const DELETE_STATE_CELENGAN = 'DELETE_STATE_CELENGAN';
 export const getPesertaList = () => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/peserta', {
+        axios.get('/api/peserta', {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -54,7 +54,7 @@ export const getPesertaList = () => {
 export const postPeserta = (data) => {
     return (dispatch) =>
 
-        axios.post('localhost:8000/api/peserta', data, {
+        axios.post('/api/peserta', data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -81,7 +81,7 @@ export const postPeserta = (data) => {
 }
 export const updatePeserta = (id, data) => {
     return (dispatch) =>
-        axios.put('localhost:8000/api/peserta/' + id, data, {
+        axios.put('/api/peserta/' + id, data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -107,7 +107,7 @@ export const updatePeserta = (id, data) => {
 }
 export const deletePeserta = (id) => {
     return (dispatch) =>
-        axios.delete('localhost:8000/api/peserta/' + id, {
+        axios.delete('/api/peserta/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -143,7 +143,7 @@ export const deleteStatePeserta = () => {
 }
 export const postLogin = (data) => {
     return (dispatch) =>
-        axios.post('localhost:8000/api/login', data, {
+        axios.post('/api/login', data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -171,7 +171,7 @@ export const postLogin = (data) => {
 
 export const getZakatFitrahList = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/zakatfitrahreceived?year_hijriah=' + year_hijriah, {
+        axios.get('/api/zakatfitrahreceived?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -197,7 +197,7 @@ export const getZakatFitrahList = (year_hijriah) => {
 }
 export const deleteZakatFitrah = (id) => {
     return (dispatch) =>
-        axios.delete('localhost:8000/api/zakatfitrahreceived/' + id, {
+        axios.delete('/api/zakatfitrahreceived/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -224,7 +224,7 @@ export const deleteZakatFitrah = (id) => {
 
 export const getPesertaZakatFitrahList = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/pesertazakatfitrahreceived?year_hijriah=' + year_hijriah, {
+        axios.get('/api/pesertazakatfitrahreceived?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -265,7 +265,7 @@ export const pesertaZakatFitrahList = (id_user, id_peserta, year_hijriah) => {
 }
 export const postZakatFitrah = (data) => {
     return (dispatch) =>
-        axios.post('localhost:8000/api/zakatfitrahreceived', data, {
+        axios.post('/api/zakatfitrahreceived', data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -303,7 +303,7 @@ export const removePostPesertaZakatFitrahList = () => {
 }
 export const getDetailZakatFitrah = (id) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/zakatfitrahreceived/' + id, {
+        axios.get('/api/zakatfitrahreceived/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -330,7 +330,7 @@ export const getDetailZakatFitrah = (id) => {
 }
 export const updateZakatFitrah = (id, data) => {
     return (dispatch) =>
-        axios.put('localhost:8000/api/zakatfitrahreceived/' + id, data, {
+        axios.put('/api/zakatfitrahreceived/' + id, data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -367,7 +367,7 @@ export const deleteStateUpdateDeleteZakatFitrah = () => {
 
 export const getZakatFitrahListSent = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/zakatfitrahsent?year_hijriah=' + year_hijriah, {
+        axios.get('/api/zakatfitrahsent?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -393,7 +393,7 @@ export const getZakatFitrahListSent = (year_hijriah) => {
 }
 export const deleteZakatFitrahSent = (id) => {
     return (dispatch) =>
-        axios.delete('localhost:8000/api/zakatfitrahsent/' + id, {
+        axios.delete('/api/zakatfitrahsent/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -420,7 +420,7 @@ export const deleteZakatFitrahSent = (id) => {
 
 export const getPesertaZakatFitrahListSent = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/pesertazakatfitrahsent?year_hijriah=' + year_hijriah, {
+        axios.get('/api/pesertazakatfitrahsent?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -461,7 +461,7 @@ export const pesertaZakatFitrahListSent = (id_user, id_peserta, year_hijriah) =>
 }
 export const postZakatFitrahSent = (data) => {
     return (dispatch) =>
-        axios.post('localhost:8000/api/zakatfitrahsent', data, {
+        axios.post('/api/zakatfitrahsent', data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -499,7 +499,7 @@ export const removePostPesertaZakatFitrahListSent = () => {
 }
 export const getDetailZakatFitrahSent = (id) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/zakatfitrahsent/' + id, {
+        axios.get('/api/zakatfitrahsent/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -526,7 +526,7 @@ export const getDetailZakatFitrahSent = (id) => {
 }
 export const updateZakatFitrahSent = (id, data) => {
     return (dispatch) =>
-        axios.put('localhost:8000/api/zakatfitrahsent/' + id, data, {
+        axios.put('/api/zakatfitrahsent/' + id, data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -566,7 +566,7 @@ export const deleteStateUpdateDeleteZakatFitrahSent = () => {
 
 export const getCelenganList = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/celengan?year_hijriah=' + year_hijriah, {
+        axios.get('/api/celengan?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -592,7 +592,7 @@ export const getCelenganList = (year_hijriah) => {
 }
 export const deleteCelengan = (id) => {
     return (dispatch) =>
-        axios.delete('localhost:8000/api/celengan/' + id, {
+        axios.delete('/api/celengan/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -619,7 +619,7 @@ export const deleteCelengan = (id) => {
 
 export const getPesertaCelenganList = (year_hijriah) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/pesertacelengan?year_hijriah=' + year_hijriah, {
+        axios.get('/api/pesertacelengan?year_hijriah=' + year_hijriah, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -660,7 +660,7 @@ export const pesertaCelenganList = (id_user, id_peserta, year_hijriah) => {
 }
 export const postCelengan = (data) => {
     return (dispatch) =>
-        axios.post('localhost:8000/api/celengan', data, {
+        axios.post('/api/celengan', data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -698,7 +698,7 @@ export const removePostPesertaCelenganList = () => {
 }
 export const getDetailCelengan = (id) => {
     return (dispatch) =>
-        axios.get('localhost:8000/api/celengan/' + id, {
+        axios.get('/api/celengan/' + id, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
@@ -726,7 +726,7 @@ export const getDetailCelengan = (id) => {
 }
 export const updateCelengan = (id, data) => {
     return (dispatch) =>
-        axios.put('localhost:8000/api/celengan/' + id, data, {
+        axios.put('/api/celengan/' + id, data, {
             headers: {
                 'api_token': localStorage.getItem('token')
             }
