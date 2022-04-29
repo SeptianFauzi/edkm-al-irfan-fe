@@ -28,7 +28,7 @@ export const getPesertaList = () => {
     return (dispatch) =>
         axios.get('/api/peserta', {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -56,7 +56,7 @@ export const postPeserta = (data) => {
 
         axios.post('/api/peserta', data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -83,7 +83,7 @@ export const updatePeserta = (id, data) => {
     return (dispatch) =>
         axios.put('/api/peserta/' + id, data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -109,7 +109,7 @@ export const deletePeserta = (id) => {
     return (dispatch) =>
         axios.delete('/api/peserta/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -145,7 +145,7 @@ export const postLogin = (data) => {
     return (dispatch) =>
         axios.post('/api/login', data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -173,7 +173,7 @@ export const getZakatFitrahList = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/zakatfitrahreceived?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -199,7 +199,7 @@ export const deleteZakatFitrah = (id) => {
     return (dispatch) =>
         axios.delete('/api/zakatfitrahreceived/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -226,7 +226,7 @@ export const getPesertaZakatFitrahList = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/pesertazakatfitrahreceived?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -267,7 +267,7 @@ export const postZakatFitrah = (data) => {
     return (dispatch) =>
         axios.post('/api/zakatfitrahreceived', data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -305,7 +305,7 @@ export const getDetailZakatFitrah = (id) => {
     return (dispatch) =>
         axios.get('/api/zakatfitrahreceived/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -332,7 +332,7 @@ export const updateZakatFitrah = (id, data) => {
     return (dispatch) =>
         axios.put('/api/zakatfitrahreceived/' + id, data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -369,7 +369,7 @@ export const getZakatFitrahListSent = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/zakatfitrahsent?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -395,7 +395,7 @@ export const deleteZakatFitrahSent = (id) => {
     return (dispatch) =>
         axios.delete('/api/zakatfitrahsent/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -422,7 +422,7 @@ export const getPesertaZakatFitrahListSent = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/pesertazakatfitrahsent?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -463,7 +463,7 @@ export const postZakatFitrahSent = (data) => {
     return (dispatch) =>
         axios.post('/api/zakatfitrahsent', data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -501,7 +501,7 @@ export const getDetailZakatFitrahSent = (id) => {
     return (dispatch) =>
         axios.get('/api/zakatfitrahsent/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -528,7 +528,7 @@ export const updateZakatFitrahSent = (id, data) => {
     return (dispatch) =>
         axios.put('/api/zakatfitrahsent/' + id, data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -568,7 +568,7 @@ export const getCelenganList = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/celengan?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -594,7 +594,7 @@ export const deleteCelengan = (id) => {
     return (dispatch) =>
         axios.delete('/api/celengan/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -621,7 +621,7 @@ export const getPesertaCelenganList = (year_hijriah) => {
     return (dispatch) =>
         axios.get('/api/pesertacelengan?year_hijriah=' + year_hijriah, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -662,7 +662,7 @@ export const postCelengan = (data) => {
     return (dispatch) =>
         axios.post('/api/celengan', data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -700,7 +700,7 @@ export const getDetailCelengan = (id) => {
     return (dispatch) =>
         axios.get('/api/celengan/' + id, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
@@ -728,7 +728,7 @@ export const updateCelengan = (id, data) => {
     return (dispatch) =>
         axios.put('/api/celengan/' + id, data, {
             headers: {
-                'api_token': localStorage.getItem('token')
+                'X-APITOKEN': localStorage.getItem('token')
             }
         })
             .then(function (response) {
