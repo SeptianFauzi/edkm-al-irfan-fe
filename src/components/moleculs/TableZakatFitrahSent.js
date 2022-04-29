@@ -62,8 +62,12 @@ function TableZakatFitrahSent(props) {
             }
         },
         {
-            field: 'date_zakat_sent', headerName: 'Tanggal', flex: 0.7, renderCell: (params) => {
+            field: 'date_zakat_sent', headerName: 'Tanggal Diberikan', flex: 0.7, renderCell: (params) => {
                 return params.getValue('date_zakat_sent')
+            }
+        }, {
+            field: 'created_at', headerName: 'Tanggal Dibuat', flex: 0.7, renderCell: (params) => {
+                return params.getValue('created_at')
             }
         },
         {
