@@ -40,7 +40,7 @@ const theme = createMuiTheme({
 });
 
 
-axios.defaults.baseURL = 'https://e-dkm-al-irfan.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:8000';
 // const store = createStore(indexReducer, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
 ReactDOM.render(
   <Provider store={store}>
